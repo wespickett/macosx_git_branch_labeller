@@ -1,0 +1,7 @@
+#!/bin/sh
+GIT_FOLDER_LOCATION=$(git rev-parse --show-toplevel)
+BRANCH_NAME=$1
+BRANCH_LABEL=$(cat $GIT_FOLDER_LOCATION/.git/branch_names/$BRANCH_NAME 2>/dev/null)
+if [[ $BRANCH_NAME =~ ^BL || $BRANCH_NAME =~ ^OTHERBL ]]; then
+    echo $BRANCH_NAME '\t---' $BRANCH_LABEL
+fi

@@ -1,0 +1,2 @@
+#!/bin/sh
+sed -nE "s/^[* ]+((BL|OTHERBL)-.*)$/\1/p" | xargs -L1 git b-fetch

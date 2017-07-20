@@ -1,0 +1,8 @@
+#!/bin/sh
+if [[ $2 ]]; then
+	git eb $1 $2
+else
+	git b-fetch $1
+fi
+
+git checkout -b $1

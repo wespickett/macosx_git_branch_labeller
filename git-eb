@@ -1,0 +1,4 @@
+#!/bin/sh
+GIT_FOLDER_LOCATION=$(git rev-parse --show-toplevel)
+mkdir -p $GIT_FOLDER_LOCATION/.git/branch_names
+echo $2 > $GIT_FOLDER_LOCATION/.git/branch_names/$1
